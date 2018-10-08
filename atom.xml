@@ -3,7 +3,7 @@
   <title>Tony_Blog</title>
   
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/theBlog/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
   <updated>2018-10-08T14:21:14.358Z</updated>
