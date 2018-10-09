@@ -88,17 +88,18 @@
 
 
 
-<meta name="description" content="Do it!">
+<meta name="description" content="socketsocket.gethostbyname(hostname)  socket.gethostbyaddr(addr) socket.getservbyname(name)  查询端口号(如name=’www’, 返回80) socket.getserbyport(80) 返回’www’ 127... 是本地ip">
 <meta name="keywords" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tony&#39;s Blog">
-<meta property="og:url" content="https://lin-tony.github.io/hexo_blog/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Network Programming">
+<meta property="og:url" content="https://lin-tony.github.io/hexo_blog/2018/10/09/Python Network Programming/index.html">
 <meta property="og:site_name" content="Tony&#39;s Blog">
-<meta property="og:description" content="Do it!">
+<meta property="og:description" content="socketsocket.gethostbyname(hostname)  socket.gethostbyaddr(addr) socket.getservbyname(name)  查询端口号(如name=’www’, 返回80) socket.getserbyport(80) 返回’www’ 127... 是本地ip">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-09T08:58:11.933Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tony&#39;s Blog">
-<meta name="twitter:description" content="Do it!">
+<meta name="twitter:title" content="Python Network Programming">
+<meta name="twitter:description" content="socketsocket.gethostbyname(hostname)  socket.gethostbyaddr(addr) socket.getservbyname(name)  查询端口号(如name=’www’, 返回80) socket.getserbyport(80) 返回’www’ 127... 是本地ip">
 
 
 
@@ -128,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="https://lin-tony.github.io/hexo_blog/"/>
+  <link rel="canonical" href="https://lin-tony.github.io/hexo_blog/2018/10/09/Python Network Programming/"/>
 
 
 
 
 
-  <title>Tony's Blog</title>
+  <title>Python Network Programming | Tony's Blog</title>
   
 
 
@@ -153,8 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
 
@@ -272,447 +272,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lin-tony.github.io/hexo_blog/hexo_blog/2018/10/09/Python good use/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tony">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/hexo_blog/images/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tony's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/hexo_blog/2018/10/09/Python good use/" itemprop="url">Python good use</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-09T17:02:56+08:00">
-                2018-10-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/hexo_blog/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Nice-Code"><a href="#Nice-Code" class="headerlink" title="Nice Code"></a>Nice Code</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">str.capitalize() 返回str的首字母大写，其他全小写</span><br><span class="line"></span><br><span class="line">str.title()  将str的所有单词首字母大写，其他全小写</span><br><span class="line"></span><br><span class="line">str.count(sub, start= <span class="number">0</span>,end=len(string))  字符串匹配，返回str中sub的个数</span><br><span class="line"></span><br><span class="line">str.endswith(suffix[, start[, end]])  suffix是匹配的字符串，如以该字符串结尾，返回T</span><br><span class="line"></span><br><span class="line">calendar.month(<span class="number">2016</span>, <span class="number">1</span>)  返回该月日历（<span class="keyword">import</span> calendar</span><br><span class="line"></span><br><span class="line">datetime.date.isocalendar()  返回格式如(year，month，day)的元组,(<span class="number">2017</span>, <span class="number">15</span>, <span class="number">6</span>)   其中date=date(<span class="number">2018</span>,<span class="number">6</span>,<span class="number">1</span>)   https://blog.csdn.net/alvin930403/article/details/<span class="number">54089087</span></span><br><span class="line"></span><br><span class="line">join()    list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]    <span class="string">','</span>.join(list) ==<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span></span><br><span class="line"></span><br><span class="line">math.factorial(num)  返回num的阶乘</span><br><span class="line"></span><br><span class="line">reversed(seq) seq -- 要转换的序列，可以是 tuple, string, list 或 range。返回一个反转的迭代器</span><br><span class="line"></span><br><span class="line">enumerate()   将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标---[(<span class="number">0</span>, <span class="string">'Spring'</span>), (<span class="number">1</span>, <span class="string">'Summer'</span>), (<span class="number">2</span>, <span class="string">'Fall'</span>), (<span class="number">3</span>, <span class="string">'Winter'</span>)]</span><br><span class="line"></span><br><span class="line">isupper() 方法检测字符串中所有的字母是否都为大写。</span><br><span class="line"></span><br><span class="line">strip([chars])  移除字符串头尾指定的字符（默认为空格）</span><br><span class="line"></span><br><span class="line">str.encode(encoding=<span class="string">'UTF-8'</span>,errors=<span class="string">'strict'</span>)    errors：设置不同错误的处理方案 默认为 <span class="string">'strict'</span></span><br><span class="line"></span><br><span class="line">pickle.dumps()  把任意对象序列化成一个bytes  .load()反序列化</span><br><span class="line"></span><br><span class="line">json.dumps(d) 返回一个str，内容是标准的JSON   .load()反序列化</span><br><span class="line"></span><br><span class="line">time.strftime(format[, t])以时间元组，并返回以可读字符串表示的当地时间，格式由参数format决定。t是一个struct_time对象。</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/hexo_blog/2018/10/09/Python good use/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lin-tony.github.io/hexo_blog/hexo_blog/2018/10/09/Python Quant/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tony">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/hexo_blog/images/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tony's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/hexo_blog/2018/10/09/Python Quant/" itemprop="url">Python Quant</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-09T16:58:15+08:00">
-                2018-10-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/hexo_blog/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h1><h3 id="reshape"><a href="#reshape" class="headerlink" title="reshape"></a>reshape</h3><p>重塑<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">b = np.arange(<span class="number">27</span>).reshape(<span class="number">3</span>, <span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">[[[ <span class="number">0</span>  <span class="number">1</span>  <span class="number">2</span>]</span><br><span class="line">  [ <span class="number">3</span>  <span class="number">4</span>  <span class="number">5</span>]</span><br><span class="line">  [ <span class="number">6</span>  <span class="number">7</span>  <span class="number">8</span>]]</span><br><span class="line"></span><br><span class="line"> [[ <span class="number">9</span> <span class="number">10</span> <span class="number">11</span>]</span><br><span class="line">  [<span class="number">12</span> <span class="number">13</span> <span class="number">14</span>]</span><br><span class="line">  [<span class="number">15</span> <span class="number">16</span> <span class="number">17</span>]]</span><br><span class="line"></span><br><span class="line"> [[<span class="number">18</span> <span class="number">19</span> <span class="number">20</span>]</span><br><span class="line">  [<span class="number">21</span> <span class="number">22</span> <span class="number">23</span>]</span><br><span class="line">  [<span class="number">24</span> <span class="number">25</span> <span class="number">26</span>]]]</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/hexo_blog/2018/10/09/Python Quant/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lin-tony.github.io/hexo_blog/hexo_blog/2018/10/09/Django+Bootstrap+Mysql 搭个人博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tony">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/hexo_blog/images/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tony's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/hexo_blog/2018/10/09/Django+Bootstrap+Mysql 搭个人博客/" itemprop="url">Django+Bootstrap+Mysql 搭个人博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-09T16:58:13+08:00">
-                2018-10-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/hexo_blog/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>新建项目<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#pycharm手动创建django项目或如下</span></span><br><span class="line">$ django-admin.py startproject website</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建Django app</span></span><br><span class="line">$ python manage.py startapp blog</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/hexo_blog/2018/10/09/Django+Bootstrap+Mysql 搭个人博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -742,9 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/hexo_blog/2018/10/09/Python Network Programming/" itemprop="url">Python Network Programming</a></h1>
+          <h1 class="post-title" itemprop="name headline">Python Network Programming</h1>
         
 
         <div class="post-meta">
@@ -816,20 +376,30 @@
       
 
       
-        
-          <h1 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h1><p>socket.gethostbyname(hostname) </p>
+        <h1 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h1><p>socket.gethostbyname(hostname) </p>
 <p>socket.gethostbyaddr(addr)</p>
 <p>socket.getservbyname(name)  查询端口号(如name=’www’, 返回80)</p>
 <p>socket.getserbyport(80) 返回’www’</p>
-<p>127.<em>.</em>.<em> 是本地ip<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/hexo_blog/2018/10/09/Python Network Programming/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<p>127.<em>.</em>.<em> 是本地ip<br><a id="more"></a><br>10.</em>.<em>.</em>  172.16-31.<em>.</em> 192.168.<em>.</em> 为私有子网所预留。</p>
+<p>子网掩码255.255.255.0 可以表述为<strong><em>.</em></strong>.<strong><em>.</em></strong>/24 （***=11111111，8位）</p>
+<h3 id="tcp"><a href="#tcp" class="headerlink" title="tcp"></a>tcp</h3><p>sock = socket.socket(xxx…)   (参数参考<a href="https://www.cnblogs.com/wumingxiaoyao/p/7047658.html" target="_blank" rel="noopener">https://www.cnblogs.com/wumingxiaoyao/p/7047658.html</a>)（ 一般要写SO_REUSERADDR以防同一端口最近关闭的连接还未关闭导致错误，因为关闭后会有CLOSE-WAIT和TIME-WAIT 状态）</p>
+<p>sock.accept() 会创建一个连接套接字  （对应客户端发送的sock.connect()）</p>
+<p>sock.listen() 会创建一个监听套接字</p>
+<p>sock.sendall() 实现了完整数据块传输，recvall需要自己写</p>
+<p>sock.getsockname()</p>
+<p>sock.bind(interface,port) interface取””空字符串表示接受任意网络接口的请求（0.0.0.0表示接受任意，py简化了）</p>
+<p>sock.shutdown(xxx) 半开连接的操作</p>
+<p>sock.makefile() 直接进行文件读写</p>
+<p>tcp客户端服务端<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env <span class="keyword">python3</span></span><br><span class="line"></span><br><span class="line">import argparse, socket</span><br><span class="line"></span><br><span class="line">def recvall(sock, length):</span><br><span class="line">    data = <span class="keyword">b</span><span class="string">''</span></span><br><span class="line">    <span class="keyword">while</span> <span class="built_in">len</span>(data) &lt; length:</span><br><span class="line">        more = sock.recv(length - <span class="built_in">len</span>(data))</span><br><span class="line">        <span class="keyword">if</span> not more:</span><br><span class="line">            raise EOFError(<span class="string">'was expecting %d bytes but only received'</span></span><br><span class="line">                           <span class="string">' %d bytes before the socket closed'</span></span><br><span class="line">                           % (length, <span class="built_in">len</span>(data)))</span><br><span class="line">        data += more</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line">def server(interface, port):</span><br><span class="line">    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">    sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, <span class="number">1</span>)</span><br><span class="line">    sock.bind((interface, port))</span><br><span class="line">    sock.listen(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">print</span>(<span class="string">'Listening at'</span>, sock.getsockname())</span><br><span class="line">    <span class="keyword">while</span> True:</span><br><span class="line">        <span class="keyword">print</span>(<span class="string">'Waiting to accept a new connection'</span>)</span><br><span class="line">        sc, sockname = sock.accept()</span><br><span class="line">        <span class="keyword">print</span>(<span class="string">'We have accepted a connection from'</span>, sockname)</span><br><span class="line">        <span class="keyword">print</span>(<span class="string">'  Socket name:'</span>, sc.getsockname())</span><br><span class="line">        <span class="keyword">print</span>(<span class="string">'  Socket peer:'</span>, sc.getpeername())</span><br><span class="line">        message = recvall(sc, <span class="number">16</span>)</span><br><span class="line">        <span class="keyword">print</span>(<span class="string">'  Incoming sixteen-octet message:'</span>, repr(message))</span><br><span class="line">        sc.sendall(<span class="keyword">b</span><span class="string">'Farewell, client'</span>)</span><br><span class="line">        sc.<span class="keyword">close</span>()</span><br><span class="line">        <span class="keyword">print</span>(<span class="string">'  Reply sent, socket closed'</span>)</span><br><span class="line"></span><br><span class="line">def client(host, port):</span><br><span class="line">    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">    sock.connect((host, port))</span><br><span class="line">    <span class="keyword">print</span>(<span class="string">'Client has been assigned socket name'</span>, sock.getsockname())</span><br><span class="line">    sock.sendall(<span class="keyword">b</span><span class="string">'Hi there, server'</span>)</span><br><span class="line">    reply = recvall(sock, <span class="number">16</span>)</span><br><span class="line">    <span class="keyword">print</span>(<span class="string">'The server said'</span>, repr(reply))</span><br><span class="line">    sock.<span class="keyword">close</span>()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    choices = &#123;<span class="string">'client'</span>: client, <span class="string">'server'</span>: server&#125;</span><br><span class="line">    parser = argparse.ArgumentParser(description=<span class="string">'Send and receive over TCP'</span>)</span><br><span class="line">    parser.add_argument(<span class="string">'role'</span>, choices=choices, <span class="keyword">help</span>=<span class="string">'which role to play'</span>)</span><br><span class="line">    parser.add_argument(<span class="string">'host'</span>, <span class="keyword">help</span>=<span class="string">'interface the server listens at;'</span></span><br><span class="line">                        <span class="string">' host the client sends to'</span>)</span><br><span class="line">    parser.add_argument(<span class="string">'-p'</span>, metavar=<span class="string">'PORT'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=<span class="number">1060</span>,</span><br><span class="line">                        <span class="keyword">help</span>=<span class="string">'TCP port (default 1060)'</span>)</span><br><span class="line">    <span class="keyword">args</span> = parser.parse_args()</span><br><span class="line">    <span class="function"><span class="keyword">function</span> = <span class="title">choices</span>[<span class="title">args</span>.<span class="title">role</span>]</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span><span class="params">(args.host, args.p)</span></span></span><br></pre></td></tr></table></figure></p>
+<p>#DNS</p>
+<p>###socket.getaddrinfo<br>socket.getaddrinfo(host, port[, family[, socktype[, proto[, flags]]]])  可解析得到IPv6地址。 返回创建一个套接字并发起连接所需的所有信息，返回的元组(family, socktype, proto, canonname, sockaddr)依次为：地址族、类型、协议代号、规范名、地址信息。用前三项作为socket构造参数，第五项为传入地址，可构造出一个连接connect()<br>flag：AI_V4MAPPED:返回IPv4映射到IPv6格式的IPv6地址.(<a href="http://www.ip2location.com/articles/ip2location-ipv4-mapped-ipv6-address" target="_blank" rel="noopener">http://www.ip2location.com/articles/ip2location-ipv4-mapped-ipv6-address</a>)</p>
+<ol>
+<li>bind：为服务器绑定端口。 将host取None，返回合适的通配符地址，可用于bind。</li>
+<li>connect/sendto:连接。设置AI_ADDRCONFIG标记，讲所有无法连接的地址过滤掉。<br>使用getaddrinfo<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># Foundations of Python Network Programming, Third Edition</span></span><br><span class="line"><span class="comment"># https://github.com/brandon-rhodes/fopnp/blob/m/py3/chapter04/www_ping.py</span></span><br><span class="line"><span class="comment"># Find the WWW service of an arbitrary host using getaddrinfo().</span></span><br><span class="line"></span><br><span class="line">import argparse, <span class="built_in">socket</span>, sys</span><br><span class="line"></span><br><span class="line">def connect_to(hostname_or_ip):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        infolist = <span class="built_in">socket</span>.getaddrinfo(</span><br><span class="line">            hostname_or_ip, <span class="string">'www'</span>, <span class="number">0</span>, <span class="built_in">socket</span>.SOCK_STREAM, <span class="number">0</span>,</span><br><span class="line">            <span class="built_in">socket</span>.AI_ADDRCONFIG | <span class="built_in">socket</span>.AI_V4MAPPED | <span class="built_in">socket</span>.AI_CANONNAME,</span><br><span class="line">            )</span><br><span class="line">    except <span class="built_in">socket</span>.gaierror <span class="keyword">as</span> e:</span><br><span class="line">        print(<span class="string">'Name service failure:'</span>, e.args[<span class="number">1</span>])</span><br><span class="line">        sys.exit(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    info = infolist[<span class="number">0</span>]  <span class="comment"># per standard recommendation, try the first one</span></span><br><span class="line">    socket_args = info[<span class="number">0</span>:<span class="number">3</span>]</span><br><span class="line">    address = info[<span class="number">4</span>]</span><br><span class="line">    s = <span class="built_in">socket</span>.<span class="built_in">socket</span>(*socket_args)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        s.connect(address)</span><br><span class="line">    except <span class="built_in">socket</span>.error <span class="keyword">as</span> e:</span><br><span class="line">        print(<span class="string">'Network failure:'</span>, e.args[<span class="number">1</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">'Success: host'</span>, info[<span class="number">3</span>], <span class="string">'is listening on port 80'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    parser = argparse.ArgumentParser(description=<span class="string">'Try connecting to port 80'</span>)</span><br><span class="line">    parser.add_argument(<span class="string">'hostname'</span>, help=<span class="string">'hostname that you want to contact'</span>)</span><br><span class="line">    connect_to(parser.parse_args().hostname)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>dns.resolver()  可进行DNS查询(<a href="https://github.com/brandon-rhodes/fopnp/blob/m/py3/chapter04/dns_mx.py" target="_blank" rel="noopener">https://github.com/brandon-rhodes/fopnp/blob/m/py3/chapter04/dns_mx.py</a>)</p>
+
       
     </div>
     
@@ -846,12 +416,28 @@
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/hexo_blog/2018/10/09/Django+Bootstrap+Mysql 搭个人博客/" rel="prev" title="Django+Bootstrap+Mysql 搭个人博客">
+                Django+Bootstrap+Mysql 搭个人博客 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -861,10 +447,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -872,6 +459,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -892,8 +483,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -977,6 +577,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#socket"><span class="nav-number">1.</span> <span class="nav-text">socket</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tcp"><span class="nav-number">1.0.1.</span> <span class="nav-text">tcp</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1106,6 +722,10 @@
   
 
   
+  <script type="text/javascript" src="/hexo_blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/hexo_blog/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

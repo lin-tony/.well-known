@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/hexo_blog/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/hexo_blog/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/hexo_blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/hexo_blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/hexo_blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/hexo_blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/hexo_blog/images/logoT.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/hexo_blog/images/logoT.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/hexo_blog/images/logoT.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/hexo_blog/atom.xml" title="Tony's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="初始化新建项目12345#pycharm手动创建django项目或如下$ django-admin.py startproject website#创建Django app$ python manage.py startapp blog">
+<meta name="keywords" content="blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django+Bootstrap+Mysql 搭个人博客">
+<meta property="og:url" content="https://lin-tony.github.io/hexo_blog/2018/10/09/Django+Bootstrap+Mysql 搭个人博客/index.html">
+<meta property="og:site_name" content="Tony&#39;s Blog">
+<meta property="og:description" content="初始化新建项目12345#pycharm手动创建django项目或如下$ django-admin.py startproject website#创建Django app$ python manage.py startapp blog">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img-blog.csdn.net/20181007211313112?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RvbnlfX2xpbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:updated_time" content="2018-10-09T08:58:13.828Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Django+Bootstrap+Mysql 搭个人博客">
+<meta name="twitter:description" content="初始化新建项目12345#pycharm手动创建django项目或如下$ django-admin.py startproject website#创建Django app$ python manage.py startapp blog">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20181007211313112?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RvbnlfX2xpbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/hexo_blog/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lin-tony.github.io/hexo_blog/2018/10/09/Django+Bootstrap+Mysql 搭个人博客/"/>
+
+
+
+
+
+  <title>Django+Bootstrap+Mysql 搭个人博客 | Tony's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/hexo_blog/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tony's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/hexo_blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/hexo_blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/hexo_blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lin-tony.github.io/hexo_blog/hexo_blog/2018/10/09/Django+Bootstrap+Mysql 搭个人博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tony">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/hexo_blog/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tony's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Django+Bootstrap+Mysql 搭个人博客</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-09T16:58:13+08:00">
+                2018-10-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/hexo_blog/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>新建项目<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#pycharm手动创建django项目或如下</span></span><br><span class="line">$ django-admin.py startproject website</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建Django app</span></span><br><span class="line">$ python manage.py startapp blog</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>更改数据库配置(sqlite-&gt;mysql)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/website/setting.py</span></span><br><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">'default'</span>: &#123;</span><br><span class="line">        <span class="string">'ENGINE'</span>: <span class="string">'django.db.backends.mysql'</span>,</span><br><span class="line">        <span class="string">'NAME'</span>: <span class="string">'blog'</span>,        <span class="comment">#数据库名字</span></span><br><span class="line">        <span class="string">'USER'</span>: <span class="string">'root'</span>,          <span class="comment">#账号</span></span><br><span class="line">        <span class="string">'PASSWORD'</span>: <span class="string">'tony'</span>,      <span class="comment">#密码</span></span><br><span class="line">        <span class="string">'HOST'</span>: <span class="string">'127.0.0.1'</span>,    <span class="comment">#IP</span></span><br><span class="line">        <span class="string">'PORT'</span>: <span class="string">'3306'</span>,                   <span class="comment">#端口</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>更改数据库配置还需初始化<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/website/__init__.py</span></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line">pymysql.install_as_MySQLdb() </span><br><span class="line"></span><br><span class="line"><span class="comment">#下面的只是调试</span></span><br><span class="line">db = pymysql.connect(<span class="string">"localhost"</span>, <span class="string">'root'</span>, <span class="string">'tony'</span>, <span class="string">'blog'</span>)</span><br><span class="line">cursor = db.cursor()</span><br><span class="line">cursor.execute(<span class="string">"select version()"</span>) <span class="comment">#执行sql语句调试一波</span></span><br><span class="line">data = cursor.fetchone()</span><br><span class="line">print(data)</span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure></p>
+<h3 id="模型设计"><a href="#模型设计" class="headerlink" title="模型设计"></a>模型设计</h3><p>一个model也是一个数据库的映射<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/blog/models.py</span></span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> User</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Category</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    name = models.CharField(<span class="string">'分类'</span>,max_length=<span class="number">128</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.name</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        verbose_name = <span class="string">'博客分类'</span></span><br><span class="line">        verbose_name_plural = verbose_name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Tag</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    name = models.CharField(<span class="string">'标签'</span>, max_length=<span class="number">128</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.name</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        verbose_name = <span class="string">'博客标签'</span></span><br><span class="line">        verbose_name_plural = verbose_name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Entry</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    title = models.CharField(<span class="string">'文章标题'</span>,max_length=<span class="number">128</span>)</span><br><span class="line">    author = models.ForeignKey(User,verbose_name=<span class="string">'作者'</span>,on_delete=models.CASCADE)</span><br><span class="line">    img = models.ImageField(upload_to=<span class="string">'blog_img'</span>,null=<span class="keyword">True</span>,blank=<span class="keyword">True</span>,verbose_name=<span class="string">'博客配图'</span>)</span><br><span class="line">    body = models.TextField(<span class="string">'正文'</span>,)</span><br><span class="line">    abstract = models.TextField(<span class="string">'摘要'</span>,max_length=<span class="number">256</span>,null=<span class="keyword">True</span>,blank=<span class="keyword">True</span>)</span><br><span class="line">    visiting = models.PositiveIntegerField(<span class="string">'访问量'</span>,default=<span class="number">0</span>)</span><br><span class="line">    category = models.ManyToManyField(<span class="string">'Category'</span>,verbose_name=<span class="string">'博客分类'</span>)</span><br><span class="line">    tags = models.ManyToManyField(<span class="string">'Tag'</span>,verbose_name=<span class="string">'标签'</span>)</span><br><span class="line">    created_time = models.DateTimeField(<span class="string">'创建时间'</span>,auto_now_add=<span class="keyword">True</span>)</span><br><span class="line">    modifyed_time = models.DateTimeField(<span class="string">'修改时间'</span>,auto_now=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.title</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        ordering = [<span class="string">'-created_time'</span>]</span><br><span class="line">        verbose_name = <span class="string">'博客正文'</span></span><br><span class="line">        verbose_name_plural = verbose_name</span><br></pre></td></tr></table></figure></p>
+<p>admin:后台管理界面, 添加删除网站的内容<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/blog/admin.py</span></span><br><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EntryAdmin</span><span class="params">(admin.ModelAdmin)</span>:</span></span><br><span class="line">    list_display = [<span class="string">'title'</span>,<span class="string">'author'</span>,<span class="string">'visiting'</span>,<span class="string">'created_time'</span>,<span class="string">'modifyed_time'</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">admin.site.register(models.Category)</span><br><span class="line">admin.site.register(models.Tag)</span><br><span class="line">admin.site.register(models.Entry,EntryAdmin)</span><br></pre></td></tr></table></figure></p>
+<p>创建超级用户<br><code>$ python manage.py createsuperuser</code></p>
+<p>此时如果出现No such Table ‘auth_user’，说明没有初始化（创建）默认数据库表<br>创建默认库<br><code>$ python manage.py migrate</code><br>如果已经运行过上面命令，就<code>$ python manage.py makemigrations</code></p>
+<h3 id="url、views"><a href="#url、views" class="headerlink" title="url、views"></a>url、views</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/website/urls.py</span></span><br><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url,include</span><br><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls),</span><br><span class="line">    url(<span class="string">r'^blog/'</span>,include(<span class="string">'blog.urls'</span>) ),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/blog/urls.py</span></span><br><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">app_name = <span class="string">'blog'</span></span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^$'</span>, views.index,name=<span class="string">'blog_index'</span>),</span><br><span class="line">    url(<span class="string">r'^(?P&lt;blog_id&gt;[0-9]+)'</span>, views.detail,name=<span class="string">'blog_detail'</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/blog/views.py</span></span><br><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">'blog/index.html'</span>,locals())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">detail</span><span class="params">(request,blog_id)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">'blog/detail.html'</span>,locals())</span><br></pre></td></tr></table></figure>
+<h3 id="基本前端"><a href="#基本前端" class="headerlink" title="基本前端"></a>基本前端</h3><p>bootstrap和js都放进/static/<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/website/setting.py 添加静态文件路径</span></span><br><span class="line">STATIC_URL = <span class="string">'/static/'</span></span><br><span class="line">STATICFILES_DIRS = [</span><br><span class="line">    os.path.join(BASE_DIR,<span class="string">'static'</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/blog/templates/blog/detail.html</span></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;博客详情&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;h1&gt;博客&#123;&#123; blog_id &#125;&#125;的详情&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/blog/base.html</span></span><br><span class="line">&#123;% load staticfiles %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"zh-CN"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;&#123;% block title %&#125;&#123;% endblock %&#125;&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">    &lt;link href=<span class="string">"&#123;% static 'bootstrap/css/bootstrap.min.css' %&#125;"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br><span class="line">    &lt;link href=<span class="string">"&#123;% static 'blog/css/blog_nav.css' %&#125;"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br><span class="line">    &#123;% block css %&#125;&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;nav class="navbar navbar-fixed-top"&gt;</span><br><span class="line">  &lt;div class="container-fluid"&gt;</span><br><span class="line">    &lt;!-- Brand and toggle get grouped for better mobile display --&gt;</span><br><span class="line">    &lt;div class="navbar-header"&gt;</span><br><span class="line">      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav" aria-expanded="false"&gt;</span><br><span class="line">        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;</span><br><span class="line">        &lt;span class="icon-bar"&gt;&lt;/span&gt;</span><br><span class="line">        &lt;span class="icon-bar"&gt;&lt;/span&gt;</span><br><span class="line">        &lt;span class="icon-bar"&gt;&lt;/span&gt;</span><br><span class="line">      &lt;/button&gt;</span><br><span class="line">      &lt;a class="navbar-brand" href="#"&gt;hhh&lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- Collect the nav links, forms, and other content for toggling --&gt;</span><br><span class="line">    &lt;div class="collapse navbar-collapse" id="my-nav"&gt;</span><br><span class="line">      &lt;ul class="nav navbar-nav"&gt;</span><br><span class="line">        &lt;li class="active"&gt;&lt;a href="/blog/"&gt;博客&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li &gt;&lt;a href="#"&gt;学习资源&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li &gt;&lt;a href="#"&gt;联系我&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">      &lt;form class="navbar-form navbar-left"&gt;</span><br><span class="line">        &lt;div class="form-group"&gt;</span><br><span class="line">          &lt;input type="text" class="form-control" placeholder="Search"&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;button type="submit" class="btn btn-default"&gt;搜索&lt;/button&gt;</span><br><span class="line">      &lt;/form&gt;</span><br><span class="line"></span><br><span class="line">      &lt;ul class="nav navbar-nav navbar-right"&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href="#"&gt;登录&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;</span><br><span class="line">  &lt;/div&gt;&lt;!-- /.container-fluid --&gt;</span><br><span class="line">&lt;/nav&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;% block content %&#125;&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line"> &lt;footer&gt;</span><br><span class="line">    &lt;div class="footer" role="navigation"&gt;</span><br><span class="line">        &lt;div class="container"&gt;</span><br><span class="line">            &lt;div class="navbar-text"&gt;</span><br><span class="line">                &lt;ul class="footer-text"&gt;</span><br><span class="line">                    &lt;li&gt;&lt;a href="#"&gt;主页&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                               &lt;li&gt;&lt;a href="#"&gt;联系我们&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                               &lt;li&gt;&lt;a href="#"&gt;关于博主&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                               &lt;li&gt;&lt;a href="#"&gt;文档支持&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                               &lt;li&gt;&lt;a href="/blog/"&gt;博客首页&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                &lt;/ul&gt;</span><br><span class="line">                &lt;p&gt;Copyright © 2018 hh &lt;/p&gt;</span><br><span class="line"></span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/footer&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;script src="&#123;% static 'jquery-3.3.1.min.js' %&#125;"&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src="&#123;% static 'bootstrap/js/bootstrap.min.js' %&#125;"&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&#123;% block script %&#125;&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/static/blog/css/blog_nav.css</span></span><br><span class="line">body &#123;</span><br><span class="line">    margin-top: <span class="number">30</span>px;</span><br><span class="line">    font-weight: <span class="number">400</span>;</span><br><span class="line">    /* Required padding <span class="keyword">for</span> .navbar-fixed-top. Change <span class="keyword">if</span> height of navigation changes. */</span><br><span class="line">    padding-top: <span class="number">70</span>px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* Navbar <span class="keyword">and</span> footer (<span class="keyword">global</span>) styling */</span><br><span class="line">.navbar-fixed-top .nav &#123;</span><br><span class="line">    padding: <span class="number">15</span>px <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.navbar &#123;</span><br><span class="line">    color: black;</span><br><span class="line">    border-width: thin;</span><br><span class="line">    -webkit-transition: <span class="number">.2</span>s;</span><br><span class="line">    background-color: white;</span><br><span class="line">    border-bottom: <span class="number">1</span>px solid <span class="comment">#e0e0e0;</span></span><br><span class="line">    background-color: white;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.navbar a &#123;</span><br><span class="line">    color: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.navbar-fixed-top .navbar-brand &#123;</span><br><span class="line">    padding: <span class="number">0</span> <span class="number">15</span>px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.navbar-header .icon-bar &#123;</span><br><span class="line">    background-color: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.navbar-nav &gt; li &gt; .navbar-active &#123;</span><br><span class="line">    color: <span class="comment">#E46E2E;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.navbar-scroll &#123;</span><br><span class="line">  background-color: white;</span><br><span class="line">    animation-duration: <span class="number">2</span>s;</span><br><span class="line">    animation-name: smooth;</span><br><span class="line">    -moz-box-shadow: <span class="number">1</span>px <span class="number">1</span>px <span class="number">1</span>px <span class="comment">#999;</span></span><br><span class="line">    -webkit-box-shadow: <span class="number">1</span>px <span class="number">1</span>px <span class="number">1</span>px <span class="comment">#999;</span></span><br><span class="line">    box-shadow: <span class="number">1</span>px <span class="number">1</span>px <span class="number">1</span>px <span class="comment">#999;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.jupytercon-nav &gt; li &gt; .black-tab &#123;</span><br><span class="line">    color: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.navbar-logo &#123;</span><br><span class="line">    height: <span class="number">45</span>px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.nav &gt; li &gt; a &#123;</span><br><span class="line">    font-size: <span class="number">20</span>px;</span><br><span class="line">    padding: <span class="number">12</span>px <span class="number">16</span>px <span class="number">10</span>px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.nav &gt; li &gt; a:hover &#123;</span><br><span class="line">    background-color: transparent;</span><br><span class="line">    color: <span class="comment">#E46E2E;</span></span><br><span class="line">    -webkit-transition: <span class="number">.2</span>s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.nav &gt; li &gt; a:focus &#123;</span><br><span class="line">    background-color: white;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.nav &gt; li &gt; a:active &#123;</span><br><span class="line">    background-color: <span class="comment">#F8F8F8;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.nav &gt; li &gt; a:visited &#123;</span><br><span class="line">    background-color: <span class="comment">#F8F8F8;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tab:hover &#123;</span><br><span class="line">    background-color: transparent;</span><br><span class="line">    color: <span class="comment">#E46E2E;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.footer &#123;</span><br><span class="line">    background-color: <span class="comment">#979797;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.footer p &#123;</span><br><span class="line">    color: white;</span><br><span class="line">    padding-top: <span class="number">10</span>px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.footer li &#123;</span><br><span class="line">    color: white;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    text-decoration: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.footer a &#123;</span><br><span class="line">    color: white;</span><br><span class="line">    text-decoration: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.footer li::after &#123;</span><br><span class="line">    content:<span class="string">" |"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.footer li:last-of-type::after &#123;</span><br><span class="line">    content:<span class="string">""</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.footer-text &#123;</span><br><span class="line">    font-size: <span class="number">16</span>px;</span><br><span class="line">    margin-left: <span class="number">0</span>;</span><br><span class="line">    padding-left: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.navbar-brand &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    height: <span class="number">50</span>px;</span><br><span class="line">    padding: <span class="number">15</span>px <span class="number">15</span>px;</span><br><span class="line">    font-size: <span class="number">20</span>px;</span><br><span class="line">    line-height: <span class="number">20</span>px;</span><br><span class="line">    margin-top: <span class="number">27</span>px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">nav .navbar-form&#123;</span><br><span class="line">    padding: <span class="number">10</span>px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/blog/index.html</span></span><br><span class="line">&#123;% extends <span class="string">'blog/base.html'</span> %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block title %&#125;博客首页&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line"></span><br><span class="line">    博客首页</span><br><span class="line">    &lt;div style="height: 440px; " &gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>最终目录如下：<br><img src="https://img-blog.csdn.net/20181007211313112?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RvbnlfX2xpbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
+<h3 id="前端设计"><a href="#前端设计" class="headerlink" title="前端设计"></a>前端设计</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/website/setting.py</span></span><br><span class="line">....</span><br><span class="line">MEDIA_ROOT = os.path.join(BASE_DIR,<span class="string">'media'</span>).replace(<span class="string">"//"</span>,<span class="string">"/"</span>)</span><br><span class="line">MEDIA_URL = <span class="string">'/media/'</span></span><br></pre></td></tr></table></figure>
+<p>添加图片的url<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/website/urls.py</span></span><br><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url,include</span><br><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> django.conf <span class="keyword">import</span> settings</span><br><span class="line"><span class="keyword">from</span> django.conf.urls.static <span class="keyword">import</span> static</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls),</span><br><span class="line">    url(<span class="string">r'^blog/'</span>,include(<span class="string">'blog.urls'</span>) ),</span><br><span class="line"></span><br><span class="line">] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT )        <span class="comment">#添加图片的url</span></span><br></pre></td></tr></table></figure></p>
+<p>添加两个方法<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/blog/models.py</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Entry</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">		...</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_absolute_url</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#获取当前博客详情页的url</span></span><br><span class="line">        <span class="keyword">return</span> reverse(<span class="string">"blog:blog_detail"</span>,kwargs=&#123;<span class="string">"blog_id"</span>:self.id&#125;)     <span class="comment">#app名字，详情页url的别名，参数是当前博客的id</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">increase_visiting</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#访问量加1</span></span><br><span class="line">        self.visiting += <span class="number">1</span></span><br><span class="line">        self.save(update_fields=[<span class="string">'visiting'</span>])   <span class="comment">#只保存某个字段</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/blog/views.py</span></span><br><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    entries = models.Entry.objects.all()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">'blog/index.html'</span>,locals())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">detail</span><span class="params">(request,blog_id)</span>:</span></span><br><span class="line">    entry = models.Entry.objects.get(id=blog_id)</span><br><span class="line">    entry.increase_visiting()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">'blog/detail.html'</span>,locals())</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#index.html</span></span><br><span class="line">&#123;% extends <span class="string">'blog/base.html'</span> %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block title %&#125;博客首页&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line"></span><br><span class="line">    &lt;div class="container"&gt;</span><br><span class="line">        &lt;div class="row"&gt;</span><br><span class="line">            &lt;div class="col-md-9"&gt;</span><br><span class="line">                &#123;% <span class="keyword">for</span> entry <span class="keyword">in</span> entries %&#125;</span><br><span class="line">                    &lt;h2&gt;&lt;a href="&#123;&#123; entry.get_absolute_url &#125;&#125;"&gt;&#123;&#123; entry.title &#125;&#125;&lt;/a&gt;&lt;/h2&gt; &lt;br&gt;</span><br><span class="line">                    &#123;% <span class="keyword">if</span> entry.img %&#125;</span><br><span class="line">                        &lt;img src=<span class="string">"&#123;&#123; entry.img.url &#125;&#125;"</span> width=<span class="string">"60%"</span> height=<span class="string">"270px"</span>/&gt;</span><br><span class="line">                    &#123;% endif %&#125;</span><br><span class="line">                    &#123;% <span class="keyword">if</span> entry.abstract %&#125;</span><br><span class="line">                        &lt;p&gt;&#123;&#123; entry.abstract &#125;&#125;&lt;/p&gt;</span><br><span class="line">                    &#123;% <span class="keyword">else</span> %&#125;</span><br><span class="line">                        &lt;p&gt;&#123;&#123; entry.body|truncatechars:180 &#125;&#125;&lt;/p&gt;</span><br><span class="line">                    &#123;% endif %&#125;</span><br><span class="line">                    &lt;p&gt;</span><br><span class="line">                        &lt;span&gt;作者：&#123;&#123; entry.author &#125;&#125;&lt;/span&gt;</span><br><span class="line">                        &lt;span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;发布时间：&#123;&#123; entry.created_time &#125;&#125;&lt;/span&gt;</span><br><span class="line">                        &lt;span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;阅读数：&#123;&#123; entry.visiting &#125;&#125;&lt;/span&gt;</span><br><span class="line">                    &lt;/p&gt;</span><br><span class="line">                &#123;% endfor %&#125;</span><br><span class="line"></span><br><span class="line">            &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">        &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#detail.html</span></span><br><span class="line">&#123;% extends <span class="string">'blog/base.html'</span> %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block title %&#125;博客详情页&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line">    &lt;div class="container"&gt;</span><br><span class="line">        &lt;div class="row"&gt;</span><br><span class="line">            &lt;div class="col-md-9"&gt;</span><br><span class="line">                &lt;h1&gt;&#123;&#123; entry.title &#125;&#125;&lt;/h1&gt;</span><br><span class="line">                &lt;p&gt;</span><br><span class="line">                    &lt;strong&gt;&#123;&#123; entry.author &#125;&#125;&lt;/strong&gt;</span><br><span class="line">                    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#123;&#123; entry.created_time|date:<span class="string">'Y年m月d日'</span> &#125;&#125;</span><br><span class="line">                    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;分类：</span><br><span class="line">                    &#123;% <span class="keyword">for</span> category <span class="keyword">in</span> entry.category.all %&#125;</span><br><span class="line">                        &amp;nbsp;&amp;nbsp;&lt;a href="#"&gt;&#123;&#123; category.name &#125;&#125;&lt;/a&gt;</span><br><span class="line">                    &#123;% endfor %&#125;</span><br><span class="line"></span><br><span class="line">                    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;标签：</span><br><span class="line">                    &#123;% <span class="keyword">for</span> tag <span class="keyword">in</span> entry.tags.all %&#125;</span><br><span class="line">                        &amp;nbsp;&amp;nbsp;&lt;a href="#"&gt;&#123;&#123; tag.name &#125;&#125;&lt;/a&gt;</span><br><span class="line">                    &#123;% endfor %&#125;</span><br><span class="line"></span><br><span class="line">                    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;浏览量：</span><br><span class="line">                            &amp;nbsp;&amp;nbsp;&#123;&#123; entry.visiting &#125;&#125;</span><br><span class="line"></span><br><span class="line">                    &#123;% <span class="keyword">if</span> entry.img %&#125;</span><br><span class="line">                        &lt;img src=<span class="string">"&#123;&#123; entry.img.url &#125;&#125;"</span> width=<span class="string">"60%"</span> height=<span class="string">"270px"</span>/&gt;</span><br><span class="line">                    &#123;% endif %&#125;</span><br><span class="line">                    &lt;hr /&gt;</span><br><span class="line">                    &lt;p&gt;</span><br><span class="line">                        &#123;&#123; entry.body &#125;&#125;</span><br><span class="line">                    &lt;/p&gt;</span><br><span class="line">                &lt;/p&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Markdown排版、语法高亮和生成目录"><a href="#Markdown排版、语法高亮和生成目录" class="headerlink" title="Markdown排版、语法高亮和生成目录"></a>Markdown排版、语法高亮和生成目录</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install markdown</span><br><span class="line">pip install pygments</span><br><span class="line">pygmentize -S default -f <span class="selector-tag">html</span> -<span class="selector-tag">a</span> <span class="selector-class">.codehilite</span> &gt; <span class="selector-tag">code</span><span class="selector-class">.css</span> #可生成<span class="selector-tag">code</span>.css文件，也就是语法高亮的样式，然后把文件放到static里</span><br></pre></td></tr></table></figure>
+<p>配置md<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /blog/views.py</span></span><br><span class="line"><span class="keyword">import</span> markdown</span><br><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    entries = models.Entry.objects.all()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">'blog/index.html'</span>,locals())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">detail</span><span class="params">(request,blog_id)</span>:</span></span><br><span class="line">    entry = models.Entry.objects.get(id=blog_id)</span><br><span class="line">    md = markdown.Markdown(extensions=[</span><br><span class="line">        <span class="string">'markdown.extensions.extra'</span>,</span><br><span class="line">        <span class="string">'markdown.extensions.codehilite'</span>,</span><br><span class="line">        <span class="string">'markdown.extensions.toc'</span>,</span><br><span class="line">    ])</span><br><span class="line">    entry.body = md.convert(entry.body)</span><br><span class="line">    entry.toc = md.toc</span><br><span class="line">    entry.increase_visiting()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">'blog/detail.html'</span>, locals())</span><br></pre></td></tr></table></figure></p>
+<p>导入css<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#base.html</span></span><br><span class="line">&#123;% load staticfiles %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"zh-CN"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;&#123;% block title %&#125;&#123;% endblock %&#125;&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">    &lt;link href=<span class="string">"&#123;% static 'bootstrap/css/bootstrap.min.css' %&#125;"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br><span class="line">    &lt;link href=<span class="string">"&#123;% static 'blog/css/blog_nav.css' %&#125;"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br><span class="line">    &lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"&#123;% static 'blog/css/code.css' %&#125;"</span>&gt; <span class="comment">#这里引入css</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;nav class="navbar navbar-fixed-top"&gt;</span><br><span class="line">  &lt;div class="container-fluid"&gt;</span><br><span class="line">    &lt;!-- Brand and toggle get grouped for better mobile display --&gt;</span><br><span class="line">    &lt;div class="navbar-header"&gt;</span><br><span class="line">      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav" aria-expanded="false"&gt;</span><br><span class="line">        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;</span><br><span class="line">        &lt;span class="icon-bar"&gt;&lt;/span&gt;</span><br><span class="line">        &lt;span class="icon-bar"&gt;&lt;/span&gt;</span><br><span class="line">        &lt;span class="icon-bar"&gt;&lt;/span&gt;</span><br><span class="line">      &lt;/button&gt;</span><br><span class="line">      &lt;a class="navbar-brand" href="#"&gt;hhh&lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- Collect the nav links, forms, and other content for toggling --&gt;</span><br><span class="line">    &lt;div class="collapse navbar-collapse" id="my-nav"&gt;</span><br><span class="line">      &lt;ul class="nav navbar-nav"&gt;</span><br><span class="line">        &lt;li class="active"&gt;&lt;a href="/blog/"&gt;博客&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li &gt;&lt;a href="#"&gt;学习资源&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li &gt;&lt;a href="#"&gt;联系我&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">      &lt;form class="navbar-form navbar-left"&gt;</span><br><span class="line">        &lt;div class="form-group"&gt;</span><br><span class="line">          &lt;input type="text" class="form-control" placeholder="Search"&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;button type="submit" class="btn btn-default"&gt;搜索&lt;/button&gt;</span><br><span class="line">      &lt;/form&gt;</span><br><span class="line"></span><br><span class="line">      &lt;ul class="nav navbar-nav navbar-right"&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href="#"&gt;登录&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;</span><br><span class="line">  &lt;/div&gt;&lt;!-- /.container-fluid --&gt;</span><br><span class="line">&lt;/nav&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;% block content %&#125;&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line"> &lt;footer&gt;</span><br><span class="line">    &lt;div class="footer" role="navigation"&gt;</span><br><span class="line">        &lt;div class="container"&gt;</span><br><span class="line">            &lt;div class="navbar-text"&gt;</span><br><span class="line">                &lt;ul class="footer-text"&gt;</span><br><span class="line">                    &lt;li&gt;&lt;a href="#"&gt;主页&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                               &lt;li&gt;&lt;a href="#"&gt;联系我们&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                               &lt;li&gt;&lt;a href="#"&gt;关于博主&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                               &lt;li&gt;&lt;a href="#"&gt;文档支持&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                               &lt;li&gt;&lt;a href="/blog/"&gt;博客首页&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                &lt;/ul&gt;</span><br><span class="line">                &lt;p&gt;Copyright © 2018 hh &lt;/p&gt;</span><br><span class="line"></span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/footer&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;script src="&#123;% static 'jquery-3.3.1.min.js' %&#125;"&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src="&#123;% static 'bootstrap/js/bootstrap.min.js' %&#125;"&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&#123;% block script %&#125;&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#detail.html</span></span><br><span class="line">&#123;% extends <span class="string">'blog/base.html'</span> %&#125;</span><br><span class="line">&#123;% load staticfiles %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% block title %&#125;博客详情页&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line">    &lt;div class="container"&gt;</span><br><span class="line">        &lt;div class="row"&gt;</span><br><span class="line">            &lt;div class="col-md-9"&gt;</span><br><span class="line">                &lt;h1&gt;&#123;&#123; entry.title &#125;&#125;&lt;/h1&gt;</span><br><span class="line">                &lt;p&gt;</span><br><span class="line">                    &lt;strong&gt;&#123;&#123; entry.author &#125;&#125;&lt;/strong&gt;</span><br><span class="line">                    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#123;&#123; entry.created_time|date:<span class="string">'Y年m月d日'</span> &#125;&#125;</span><br><span class="line">                    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;分类：</span><br><span class="line">                    &#123;% <span class="keyword">for</span> category <span class="keyword">in</span> entry.category.all %&#125;</span><br><span class="line">                        &amp;nbsp;&amp;nbsp;&lt;a href="#"&gt;&#123;&#123; category.name &#125;&#125;&lt;/a&gt;</span><br><span class="line">                    &#123;% endfor %&#125;</span><br><span class="line"></span><br><span class="line">                    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;标签：</span><br><span class="line">                    &#123;% <span class="keyword">for</span> tag <span class="keyword">in</span> entry.tags.all %&#125;</span><br><span class="line">                        &amp;nbsp;&amp;nbsp;&lt;a href="#"&gt;&#123;&#123; tag.name &#125;&#125;&lt;/a&gt;</span><br><span class="line">                    &#123;% endfor %&#125;</span><br><span class="line"></span><br><span class="line">                    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;浏览量：</span><br><span class="line">                            &amp;nbsp;&amp;nbsp;&#123;&#123; entry.visiting &#125;&#125;</span><br><span class="line"></span><br><span class="line">                    &#123;% <span class="keyword">if</span> entry.img %&#125;</span><br><span class="line">                        &lt;img src=<span class="string">"&#123;&#123; entry.img.url &#125;&#125;"</span> width=<span class="string">"10%"</span> height=<span class="string">"10%"</span>/&gt;</span><br><span class="line">                    &#123;% endif %&#125;</span><br><span class="line">                    &lt;hr /&gt;</span><br><span class="line">                    &lt;p&gt;</span><br><span class="line">                        &#123;&#123; entry.toc|safe &#125;&#125; <span class="comment">#给加上safe过滤器，表示不需要转义，直接显示原始内容</span></span><br><span class="line">                        &#123;&#123; entry.body|safe &#125;&#125;  <span class="comment">#一样</span></span><br><span class="line">                    &lt;/p&gt;</span><br><span class="line">                &lt;/p&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在blog查看效果</p>
+<p>暂时先搁置，发现还有挺多没学到的东西。。</p>
+<p>参考：</p>
+<blockquote>
+<p><a href="http://wiki.jikexueyuan.com/project/django-set-up-blog/models.html" target="_blank" rel="noopener">http://wiki.jikexueyuan.com/project/django-set-up-blog/models.html</a><br><a href="https://www.cnblogs.com/derek1184405959/p/9060981.html" target="_blank" rel="noopener">https://www.cnblogs.com/derek1184405959/p/9060981.html</a></p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hexo_blog/2018/10/09/Python Network Programming/" rel="next" title="Python Network Programming">
+                <i class="fa fa-chevron-left"></i> Python Network Programming
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/hexo_blog/2018/10/09/Python Quant/" rel="prev" title="Python Quant">
+                Python Quant <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/hexo_blog/images/head.jpg"
+                alt="Tony" />
+            
+              <p class="site-author-name" itemprop="name">Tony</p>
+              <p class="site-description motion-element" itemprop="description">Do it!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/hexo_blog/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/hexo_blog/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/hexo_blog/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lin-tony" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/tony__lin" target="_blank" title="Csdn">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Csdn</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.cnblogs.com/tony-/" target="_blank" title="CnBlog">
+                      
+                        <i class="fa fa-fw fa-globe"></i>CnBlog</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化"><span class="nav-number">1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型设计"><span class="nav-number">2.</span> <span class="nav-text">模型设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#url、views"><span class="nav-number">3.</span> <span class="nav-text">url、views</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本前端"><span class="nav-number">4.</span> <span class="nav-text">基本前端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端设计"><span class="nav-number">5.</span> <span class="nav-text">前端设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown排版、语法高亮和生成目录"><span class="nav-number">6.</span> <span class="nav-text">Markdown排版、语法高亮和生成目录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tony</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/hexo_blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexo_blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexo_blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexo_blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexo_blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/hexo_blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/hexo_blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/hexo_blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/hexo_blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/hexo_blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/hexo_blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/hexo_blog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
