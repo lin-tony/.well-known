@@ -3,4 +3,4 @@
 通过hexo部署到github page上
 
 
-Demo: http://www.tonylin.top/
+Demo: https://lin-tony.github.io/hexo_blog/
